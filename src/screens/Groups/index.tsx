@@ -13,17 +13,17 @@ export function Groups() {
   return (
     <Container>
       <Header />
-      <Highlight title="Turmas" subtitle="Jogue com a sua turma!" />
+      <Highlight title="Times" subtitle="Jogue com a sua galera!" />
       <FlatList
         data={groups}
         keyExtractor={(item) => item}
         renderItem={({ item }) => <GroupCard title={item} />}
         contentContainerStyle={groups.length === 0 && { flex: 1 }}
         ListEmptyComponent={
-          <ListEmpty message="🕹 Ainda não existem turmas cadastradas 🎮" />
+          <ListEmpty message="🕹 Ainda não existem times cadastrados 🎮" />
         }
       />
-      <Button title="Criar nova turma" />
+      <Button title="Criar novo time" />
     </Container>
   )
 }
